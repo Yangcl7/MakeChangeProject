@@ -15,15 +15,23 @@ public class MakeChangeApp {
 		cashTendered = kb.nextDouble();
 		
 		
+		while (cashTendered < itemPrice) {
+			System.out.println("Sorry, that's not enough, the price is: " + itemPrice );
+			cashTendered = kb.nextDouble();
+			
+		}
 	
 		if (cashTendered > itemPrice) {
 			change = cashTendered - itemPrice;
-//			System.out.println(change);
 			register.cashTendered(itemPrice, cashTendered);
 			
-		}if (cashTendered < itemPrice) {
-			
 		}
+		if (cashTendered == itemPrice) {
+			System.out.println("Thanks, come again.");
+		
+		}
+		
+		
 			
 		
 		

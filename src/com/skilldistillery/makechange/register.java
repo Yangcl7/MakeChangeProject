@@ -7,20 +7,21 @@ public class Register {
 	public double cashTendered(double itemPrice, double cashTendered) {
 		// give valus to the ints
 		
-		int change =(int) ((cashTendered - itemPrice) * 100); 
+		int itemPennies = (int) (itemPrice * 100);
+		int cashPennies = (int) (cashTendered * 100);
+		
+		int change = cashPennies - itemPennies;
 		System.out.println("\nYour change is:");
 		
 		if (change >= 2000) {
 			twentyDollars = change / 2000;
 			change = change % 2000;
 			System.out.println(twentyDollars + " twentyDollar bills");
-//			System.out.println(change + " Change");
 		}
 		if (change >= 1000) {
 			tenDollars = change /1000;
 			change = change % 1000;
 			System.out.println(tenDollars + " ten dollar bills");
-//			System.out.println(change + "Change");
 		}
 		if (change >= 500) {
 			fiveDollars = change / 500;
@@ -49,7 +50,7 @@ public class Register {
 		}
 		if (change >= 1){
 			pennies =  change / 1;
-			change = change % 2;
+			change = change % 1;
 			System.out.println(pennies + " pennies");
 		}
 
