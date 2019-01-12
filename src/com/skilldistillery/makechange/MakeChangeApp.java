@@ -16,7 +16,7 @@ public class MakeChangeApp {
 		
 		
 		while (cashTendered < itemPrice) {
-			System.out.println("Sorry, that's not enough, the price is: " + itemPrice );
+			System.out.println("Sorry, that's not enough, the remaining: " + (itemPrice - cashTendered) );
 			cashTendered = kb.nextDouble();
 			
 		}
