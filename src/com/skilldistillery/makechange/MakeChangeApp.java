@@ -5,8 +5,9 @@ import java.util.Scanner;
 public class MakeChangeApp {
 
 	public static void main(String[] args) {
-		double change, itemPrice, cashTendered, twentyDollars, tenDollars, fiveDollars, 				   oneDollars, quarters, dime, nickles, pennies;
+		double change, itemPrice, cashTendered;
 		Scanner kb = new Scanner(System.in);
+		Register register = new Register();
 		
 		System.out.println("What is the total sale price?");
 		itemPrice = kb.nextDouble();
@@ -15,10 +16,12 @@ public class MakeChangeApp {
 		
 		
 	
-		while (cashTendered > itemPrice) {
+		if (cashTendered > itemPrice) {
 			change = cashTendered - itemPrice;
-			System.out.println(change);
-			return;
+//			System.out.println(change);
+			register.cashTendered(itemPrice, cashTendered);
+			
+		}if (cashTendered < itemPrice) {
 			
 		}
 			
